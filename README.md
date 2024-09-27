@@ -20,10 +20,7 @@ https://crud-basics-e2bb0-default-rtdb.asia-southeast1.firebasedatabase.app/
 9. Assign the URL to a const:<br>
 `const appSettings = {
     databaseURL: 'https://crud-basics-e2bb0-default-rtdb.asia-southeast1.firebasedatabase.app/'
-}`
-<br>
-10. Import `initializeApp` function. In order for the import to work the JS file needs to be specified as a module in the HTML file:
-<br>
-`<script src="main.js" type="module" defer></script>`
-<br>
+}`<br>
+10. Import `initializeApp` function. In order for the import to work the JS file needs to be specified as a module in the HTML file:<br>
+`<script src="main.js" type="module" defer></script>`<br>
 `import {initializeApp} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"`
