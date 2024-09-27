@@ -80,3 +80,7 @@ This functioncan be used to detemine if the snapshot is empty.
 If the DB items aren't objects, as in if they are only key/value pairs, use the `set()` function instead of the `update()` function. Because the `update()` function is only used when the database record is an object.<br>
 Import the set function:<br>
 `import {getDatabase, ref, push, onValue, remove, set} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"`<br>
+`const key = document.getElementById('key').value`<br>
+`let movieLocationInDB = ref(database, ``movies/${key}``)`<br>
+`const updatedTitle = document.getElementById('updated-title').value`<br>
+`set(movieLocationInDB, updatedTitle)`
