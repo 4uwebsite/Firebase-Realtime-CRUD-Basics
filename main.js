@@ -1,6 +1,6 @@
 // Import Firebase functions.
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"
-import {getDatabase, ref, push, onValue, remove} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"
+import {getDatabase, ref, push, onValue, remove, set} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"
 
 // Configure DB connectivity
 const appSettings = {
@@ -63,4 +63,13 @@ deleteBtn.addEventListener('click', function(){
     const key = document.getElementById('key').value
     let movieLocationInDB = ref(database, `movies/${key}`)
     remove(movieLocationInDB)
+})
+
+// CRUD: Set (change) movie title using key. We use the 'set' function here because the 'update' function is only used when you need to update as an object.
+const updateBtn = document.getElementById('update')
+updateBtn.addEventListener('click', function(){
+    const key = document.getElementById('key').value
+    let movieLocationInDB = ref(database, `movies/${key}`)
+    const updatedTitle = document.getElementById('updated-title').value
+    set(movieLocationInDB, updatedTitle)
 })

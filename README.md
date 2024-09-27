@@ -2,7 +2,7 @@
  CRUD basics for Realitime Firebase DB using JS.
 
 # Version
- 0.0.0
+ 1.0.0
 
 # Steps
  The stepsrequired to CRUD:
@@ -75,3 +75,8 @@ Import the `remove()` function and specify the exact location of the item in the
 
 ### snapshot.exists() function
 This functioncan be used to detemine if the snapshot is empty.
+
+## set Function
+If the DB items aren't objects, as in if they are only key/value pairs, use the `set()` function instead of the `update()` function. Because the `update()` function is only used when the database record is an object.<br>
+Import the set function:<br>
+`import {getDatabase, ref, push, onValue, remove, set} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"`<br>
