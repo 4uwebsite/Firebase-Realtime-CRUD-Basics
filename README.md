@@ -17,8 +17,7 @@
 7. In 'Security Rules' select 'Start in test mode.' CRUD is allowed for 30 days in test mode.
 8. Copy DB reference URL:
 https://crud-basics-e2bb0-default-rtdb.asia-southeast1.firebasedatabase.app/
-9. Assign the URL to a const:
-<br>
+9. Assign the URL to a const:<br>
 `const appSettings = {
     databaseURL: 'https://crud-basics-e2bb0-default-rtdb.asia-southeast1.firebasedatabase.app/'
 }`
